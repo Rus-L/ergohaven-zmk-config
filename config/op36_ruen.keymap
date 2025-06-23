@@ -51,9 +51,8 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <300>;
-            flavor = "tap-preferred"; // Тап срабатывает, если не удерживать
+            flavor = "tap-preferred";
             bindings = <&mo 6>, <&kp SPC>;
- // Холд = мышыный слой, тап = пробел
         };
     };
 

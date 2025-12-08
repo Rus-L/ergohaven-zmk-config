@@ -43,28 +43,39 @@
     combos {
         compatible = "zmk,combos";
 
-        kha {
-            bindings = <&kp RU_CYRILLIC_HA>;
+        backspase {
+            bindings = <&kp BACKSPACE>;
             key-positions = <6 7>;
-            layers = <1>;
+												 
         };
-
-        hrdsgn {
-            bindings = <&kp RU_CYRILLIC_HARD_SIGN>;
+        delete {
+            bindings = <&kp DELETE>;
             key-positions = <7 8>;
-            layers = <1>;
+												 
         };
 
         cmben {
             bindings = <&layer_en>;
             key-positions = <2 3>;
-            layers = <1>;
+            layers = <1 6>;
         };
 
         cmbru {
             bindings = <&layer_ru>;
             key-positions = <2 3>;
             layers = <0>;
+        };
+
+        to_mouse {
+            bindings = <&to 6>;
+            key-positions = <11 12>;
+            layers = <0>;
+        };
+
+        x {
+            bindings = <&kp RU_CYRILLIC_HA>;
+            key-positions = <8 9>;
+            layers = <1>;
         };
     };
 
@@ -191,6 +202,17 @@
             >;
 
             display-name = "Adjust";
+        };
+
+        mouse {
+            bindings = <
+  &trans  &trans     &kp SCROLLLOCK  &kp KP_NUM  &trans                    &trans  &trans  &trans  &trans  &trans
+  &trans  &mkp MCLK  &mkp RCLK       &mkp LCLK   &trans                    &trans  &trans  &trans  &trans  &trans
+  &trans  &trans     &trans          &trans      &trans                    &trans  &trans  &trans  &trans  &trans
+                                     &trans      &trans  &trans    &trans  &trans  &trans
+            >;
+
+            label = "Mouse";
         };
     };
 };
